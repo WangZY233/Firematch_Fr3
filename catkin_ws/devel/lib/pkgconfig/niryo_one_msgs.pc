@@ -1,0 +1,8 @@
+prefix=/home/wangzy/Workspace/Fr3_workspace/catkin_ws/devel
+
+Name: niryo_one_msgs
+Description: Description of niryo_one_msgs
+Version: 2.3.1
+Cflags: -I/home/wangzy/Workspace/Fr3_workspace/catkin_ws/devel/include
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy std_msgs message_runtime actionlib_msgs geometry_msgs moveit_msgs

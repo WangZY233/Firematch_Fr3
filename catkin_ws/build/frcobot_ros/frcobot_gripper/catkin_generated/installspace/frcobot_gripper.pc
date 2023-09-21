@@ -1,0 +1,8 @@
+prefix=/home/wangzy/Workspace/Fr3_workspace/catkin_ws/install
+
+Name: frcobot_gripper
+Description: Description of frcobot_gripper
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

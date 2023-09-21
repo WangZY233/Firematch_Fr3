@@ -1,0 +1,8 @@
+prefix=/home/wangzy/Workspace/Fr3_workspace/catkin_ws/install
+
+Name: mcp_can_rpi
+Description: Description of mcp_can_rpi
+Version: 1.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lmcp_can_rpi
+Requires: 

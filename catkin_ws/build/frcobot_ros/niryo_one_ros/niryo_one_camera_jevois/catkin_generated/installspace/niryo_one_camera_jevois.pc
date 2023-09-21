@@ -1,0 +1,8 @@
+prefix=/home/wangzy/Workspace/Fr3_workspace/catkin_ws/install
+
+Name: niryo_one_camera_jevois
+Description: Description of niryo_one_camera_jevois
+Version: 2.2.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

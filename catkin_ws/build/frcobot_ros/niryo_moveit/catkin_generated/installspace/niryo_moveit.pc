@@ -1,0 +1,8 @@
+prefix=/home/wangzy/Workspace/Fr3_workspace/catkin_ws/install
+
+Name: niryo_moveit
+Description: Description of niryo_moveit
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: 

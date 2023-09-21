@@ -1,0 +1,16 @@
+-I/home/wangzy/Workspace/Fr3_workspace/catkin_ws/src/frcobot_ros/frcobot_gripper/include
+-I/home/wangzy/Workspace/Fr3_workspace/catkin_ws/src/frcobot_ros/frcobot_gripper/include/frcobot_gripper
+-I/home/wangzy/Workspace/Fr3_workspace/catkin_ws/src/frcobot_ros/frcobot_gripper/include/xmlrpc-c
+-I/opt/ros/noetic/include
+-I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp
+-I/usr/include
+-I/usr/include/eigen3
+-I/usr/include/OGRE/Overlay
+-I/usr/include/OGRE
+-DROS_BUILD_SHARED_LIBS=1
+-DROS_BUILD_SHARED_LIBS=1
+-DROS_PACKAGE_NAME="frcobot_gripper"
+-DROSCONSOLE_BACKEND_LOG4CXX
+-o
+/home/wangzy/Workspace/Fr3_workspace/catkin_ws/build/frcobot_ros/frcobot_gripper/include/frcobot_gripper/moc_gripper_io_pad.cpp
+/home/wangzy/Workspace/Fr3_workspace/catkin_ws/src/frcobot_ros/frcobot_gripper/include/frcobot_gripper/gripper_io_pad.h

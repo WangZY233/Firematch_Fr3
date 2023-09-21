@@ -1,0 +1,8 @@
+prefix=/home/wangzy/Workspace/Fr3_workspace/catkin_ws/devel
+
+Name: niryo_one_tcp_server
+Description: Description of niryo_one_tcp_server
+Version: 2.3.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
