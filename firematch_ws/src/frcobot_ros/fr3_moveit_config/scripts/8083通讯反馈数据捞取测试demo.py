@@ -7,6 +7,7 @@ def socket_con():
     error = Con_SOCKET.connect_ex(('192.168.58.2', 8083))
     print(error)
     RV = Con_SOCKET.recv(1024)
+    # print(RV.type)
     # 创建新的列保存字节流内容-16进制
     RVV = []
     for i in range(len(RV)):

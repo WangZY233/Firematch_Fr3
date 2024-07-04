@@ -24,10 +24,10 @@ class MoveItFkDemo:
 
         # Initialize the ROS node
         rospy.init_node('moveit_fk_demo', anonymous=True)
-        rospy.Subscriber('/force_msg', Float32MultiArray, self.force_callback)
+        # rospy.Subscriber('/force_msg', Float32MultiArray, self.force_callback)
  
         # Initialize the arm group in the robotic arm that needs to be controlled by the move group
-        self.arm = moveit_commander.MoveGroupCommander('fr3_arm')
+        self.arm = MoveGroupCommander('fr5_arm')
         
         # Set the allowable error value of the robot arm movement
         self.arm.set_goal_joint_tolerance(0.001)
@@ -35,6 +35,8 @@ class MoveItFkDemo:
         # Set the maximum velocity and acceleration allowed
         self.arm.set_max_acceleration_scaling_factor(0.5)
         self.arm.set_max_velocity_scaling_factor(0.5)
+        # 设置目标位置所使用的参考坐标系
+        self.arm.set_pose_reference_frame('bask_link')
         
         # 初始化变量
         self.robot = frrpc.RPC('192.168.58.2')
@@ -218,22 +220,37 @@ class MoveItFkDemo:
         # self.move_to_match()
         # self.match_strike()
         # self.drop_match()
+    
+    def set_arm_pose(self,px = 0.0,py = 0.0,pz = 0.0,ox = 0.0,oy = 0.0,oz = 0.0,ow = 0.0):
+        target_pose = PoseStamped()
+        end_effector_link = self.arm.get_end_effector_link()
+        target_pose.header.frame_id = 'base_link'
+        target_pose.header.stamp = rospy.Time.now()     
+        target_pose.pose.position.x = px
+        target_pose.pose.position.y = py
+        target_pose.pose.position.z = pz
+        target_pose.pose.orientation.x = ox
+        target_pose.pose.orientation.y = oy
+        target_pose.pose.orientation.z = oz
+        target_pose.pose.orientation.w = ow
+        # 设置机器臂当前的状态作为运动初始状态
+        self.arm.set_start_state_to_current_state()
+        # 设置机械臂终端运动的目标位姿
+        self.arm.set_pose_target(target_pose, end_effector_link)
+        # 规划运动路径
+        plan_success,traj,planning_time,error_code=self.arm.plan()
+        # 按照规划的运动路径控制机械臂运动
+        self.arm.execute(traj)
+        return traj
 
 if __name__ == "__main__":
     try:
         demo = MoveItFkDemo()
-        # rospy.Subscriber('/force_msg', Float32MultiArray, demo.force_callback)
-        # demo.main_motions()
-        ret = demo.robot.GetActualJointPosDegree(1)
-        ret2 = demo.robot.GetActualTCPPose(1)
-        print(ret,ret2)
-        print(x)
-        # print(demo.robot.GetJointTorques(0) )
-        # demo.set_arm_joint(1.7628250122070312, -1.5163439512252808, 1.806952953338623, -1.8892040252685547, -1.583022952079773, -0.7513350248336792)
-        # for i in range(5):
-        #     demo.robot.ServoCart(1, [0.0,0.0,8.0,0.0,0.0,0.0], demo.gain, 0.0, 0.0, demo.t, 0.0, 0.0)
-        #     rospy.sleep(0.5)
-        # rospy.spin()
+        demo.set_arm_pose(0.42783454060554504, -0.6596415638923645, 0.3027,-0.123845,-0.0643622,-0.000349954,0.990211)
+
+
+
+
 
 
         

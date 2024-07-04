@@ -7,13 +7,6 @@ ip = '192.168.58.2'
 robot = frrpc.RPC('192.168.58.2')
 # ret = robot.GetDefaultTransVel()  # 获取机器人当前速度
 # print(ret)
-a = robot.GetActualTCPSpeed()
-
-print(time.time().type)
-time.sleep(0.1)
-print(time.time())
-Con_SOCKET = socket.socket()
-Con_SOCKET.connect_ex((ip, 8080))
 # 手动模式字符串:/f/bIII52III303III7IIIMode(1)III/b/f
 OPmode = '/f/bIII52III303III'+str(len('Mode(1)'))+'IIIMode(1)III/b/f'
 # 自动模式字符串:/f/bIII51III303III7IIIMode(0)III/b/f
@@ -26,17 +19,14 @@ startword = '/f/bIII54III101III5IIISTARTIII/b/f'
 # time.sleep(1)
 # RCV = Con_SOCKET.recv(1024)
 # print(RCV)
-n_pos = [0.0,0.0,-0.5,0.0,0.0,0.0]
-gain = [1.0,1.0,1.0,0.0,0.0,0.0]
-t = 0.001 # 指令周期，单位[s]，[0.001~0.016]；
-
-movedata = 'GetActualTCPCompositeSpeed()'
-
-move = '/f/bIII52III341III'+str(len(movedata))+'III'+movedata+'III/b/f'
-print(move)
-Con_SOCKET.send(move.encode('UTF-8'))
-RCV = Con_SOCKET.recv(1024)
-print(RCV)
+eP1=[0.000,0.000,0.000,0.000]
+dP1=[25.000,0.000,0.000,0.000,0.000,0.000]
+for i in range(10):
+    J1 = robot.GetActualJointPosDegree(0)[1:7]
+    print(J1)
+    P1 = robot.GetActualTCPPose(0)[1:7]
+print(P1)
+robot.MoveL(J1,P1,0,0,100.0,180.0,100.0,-1.0,eP1,0,1,dP1)
 
 # waitms = 'WaitMs('+str(int(100))+')'
 # wait = '/f/bIII52III304III'+str(len(waitms))+'III'+waitms+'III/b/f'

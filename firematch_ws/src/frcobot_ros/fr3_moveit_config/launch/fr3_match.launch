@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="fr3_moveit_config" type="jointPublisher.py" name="jointPublisher" output="screen"></node>
+    <node pkg="force_msg" type="force_msg_node" name="force_msg_node" output="screen"></node>
+    <node pkg="fr3_moveit_config" type="fr3main.py" name="fr3main" output="screen"></node>
+</launch>
