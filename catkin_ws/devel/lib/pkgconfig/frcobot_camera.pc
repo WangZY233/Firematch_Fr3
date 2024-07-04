@@ -1,8 +1,0 @@
-prefix=/home/wangzy/Workspace/Fr3_workspace/catkin_ws/devel
-
-Name: frcobot_camera
-Description: Description of frcobot_camera
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: roscpp rospy std_msgs

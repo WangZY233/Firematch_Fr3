@@ -1,8 +1,0 @@
-prefix=/home/wangzy/Workspace/Fr3_workspace/force_sensor/catkin_ws/install
-
-Name: force_msg
-Description: Description of force_msg
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

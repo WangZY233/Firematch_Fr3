@@ -1,2 +1,0 @@
-force_msg
--DCATKIN_DEVEL_PREFIX=/home/wangzy/Workspace/Fr3_workspace/force_sensor/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/wangzy/Workspace/Fr3_workspace/force_sensor/catkin_ws/install -G Unix Makefiles

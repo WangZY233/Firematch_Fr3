@@ -1,8 +1,0 @@
-prefix=/home/wangzy/Workspace/Fr3_workspace/catkin_ws/devel
-
-Name: ros_control_boilerplate
-Description: Description of ros_control_boilerplate
-Version: 0.5.0
-Cflags: -I/home/wangzy/Workspace/Fr3_workspace/catkin_ws/devel/include -I/home/wangzy/Workspace/Fr3_workspace/catkin_ws/src/frcobot_ros/ros_control_boilerplate/include
-Libs: -L${prefix}/lib -lgeneric_hw_control_loop -lgeneric_hw_interface -lsim_hw_interface
-Requires: hardware_interface controller_manager roscpp control_msgs trajectory_msgs urdf joint_limits_interface transmission_interface control_toolbox std_msgs sensor_msgs rosparam_shortcuts message_generation message_runtime

@@ -1,8 +1,0 @@
-prefix=/home/wangzy/Workspace/Fr3_workspace/catkin_ws/devel
-
-Name: niryo_one_debug
-Description: Description of niryo_one_debug
-Version: 2.3.1
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: roscpp rospy std_msgs niryo_one_msgs mcp_can_rpi dynamixel_sdk

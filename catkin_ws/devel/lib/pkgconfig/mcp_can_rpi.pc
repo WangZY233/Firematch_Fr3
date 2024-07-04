@@ -1,8 +1,0 @@
-prefix=/home/wangzy/Workspace/Fr3_workspace/catkin_ws/devel
-
-Name: mcp_can_rpi
-Description: Description of mcp_can_rpi
-Version: 1.0.0
-Cflags: -I/home/wangzy/Workspace/Fr3_workspace/catkin_ws/src/frcobot_ros/niryo_one_ros/mcp_can_rpi/include
-Libs: -L${prefix}/lib -lmcp_can_rpi
-Requires: 

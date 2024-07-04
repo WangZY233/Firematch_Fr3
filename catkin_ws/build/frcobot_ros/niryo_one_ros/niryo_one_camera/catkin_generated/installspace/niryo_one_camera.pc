@@ -1,8 +1,0 @@
-prefix=/home/wangzy/Workspace/Fr3_workspace/catkin_ws/install
-
-Name: niryo_one_camera
-Description: Description of niryo_one_camera
-Version: 2.3.1
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

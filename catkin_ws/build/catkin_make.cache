@@ -1,2 +1,0 @@
-frcobot_ros/fr10_moveit_config:frcobot_ros/fr3_moveit_config:frcobot_ros/fr5_moveit_config:frcobot_ros/frcobot_camera:frcobot_ros/frcobot_description:frcobot_ros/frcobot_gripper:frcobot_ros/frcobot_hw:frcobot_ros/moveit_msgs
--DCATKIN_DEVEL_PREFIX=/home/wangzy/Workspace/Fr3_workspace/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/wangzy/Workspace/Fr3_workspace/catkin_ws/install -G Unix Makefiles
