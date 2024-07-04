@@ -1,7 +1,7 @@
 # Firematch_FR3
 
 ## 介绍
-Dian团队HN组火柴实验
+火柴感度实验
 
 ### 展示
 ![划火柴](fig/pal_torch.gif "划火柴")
